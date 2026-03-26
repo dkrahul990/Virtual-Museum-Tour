@@ -1,0 +1,46 @@
+.items{
+  width: 100%;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.mu-01 {
+  height: 360px;
+  width: 400px;
+  display: flex;
+  overflow: hidden; /* important to hide overflow */
+}
+
+.mu-01 ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: slide 15s linear infinite; 
+}
+
+.mu-01 ul li {
+  background: rgb(135, 105, 105);
+  height: 360px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-right: 2px;
+}
+.mu-01 p{
+  position: relative;
+  z-index: 1;
+  color:red;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}

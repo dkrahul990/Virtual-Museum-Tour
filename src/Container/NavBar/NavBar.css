@@ -1,0 +1,78 @@
+nav {
+  margin: 0;
+  padding: 0.5rem 2rem;
+  position: relative;
+  z-index: 1000;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(220, 216, 218,0.2);
+  color: white;
+  backdrop-filter: blur(100px);
+
+}
+nav .logo{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+  letter-spacing: 2px;
+}
+
+nav .logo img {
+  height: 40px;
+  transition: opacity 0.3s ease;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navButton {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+nav ul li Link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li Link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+  .navButton {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navButton:hover {
+    outline: none;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 5rem;
+    top: 4rem;
+    right: 0;
+    background: #de0164;
+    padding: 1rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
